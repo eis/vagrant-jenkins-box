@@ -9,4 +9,4 @@ Steps to start it up:
 2. vagrant plugin install vagrant-omnibus
 3. vagrant up
 
-Jenkins is configured to respond on http://localhost:8888
+Jenkins is configured to respond on [http://localhost:8888](http://localhost:8888)

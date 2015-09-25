@@ -1,9 +1,6 @@
 [submodule "cookbooks/jenkins"]
 	path = cookbooks/jenkins
 	url = https://github.com/opscode-cookbooks/jenkins.git
-[submodule "cookbooks/java"]
-	path = cookbooks/java
-	url = http://github.com/socrata-cookbooks/java
 [submodule "cookbooks/apt"]
 	path = cookbooks/apt
 	url = https://github.com/opscode-cookbooks/apt.git

@@ -114,11 +114,14 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   #   chef.json = { :mysql_password => "foo" }
   # end
  config.omnibus.chef_version = :latest
+
+ config.vm.provision :shell, :privileged => true, :inline => "yum install java-1.7.0-openjdk -y"
+
  config.vm.provision "chef_solo" do |chef|
    #chef.cookbooks_path = "../my-recipes/cookbooks"
    #chef.roles_path = "../my-recipes/roles"
    #chef.data_bags_path = "../my-recipes/data_bags"
-   chef.add_recipe "java" #::openjdk7
+   
    chef.add_recipe "jenkins::master"
    #chef.add_recipe "mysql"
    #chef.add_role "web"

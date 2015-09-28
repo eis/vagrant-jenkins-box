@@ -37,7 +37,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # config.vm.network "forwarded_port", guest: 80, host: 8080
 
   # Jenkins configured to be accessed from host 8888
-  config.vm.network "forwarded_port", guest: 8080, host: 8888
+  config.vm.network "forwarded_port", guest: 8080, host: 8082
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
@@ -116,6 +116,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
  config.omnibus.chef_version = :latest
 
  config.vm.provision :shell, :privileged => true, :inline => "yum install java-1.7.0-openjdk -y"
+ config.vm.provision :shell, :privileged => true, :inline => "service iptables stop"
 
  config.vm.provision "chef_solo" do |chef|
    #chef.cookbooks_path = "../my-recipes/cookbooks"

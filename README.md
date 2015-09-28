@@ -11,4 +11,4 @@ Steps to start it up:
 4. $ git submodule update
 5. $ vagrant up
 
-Jenkins is configured to respond on [http://localhost:8888](http://localhost:8888)
+Jenkins is configured to respond on [http://localhost:8082](http://localhost:8082)
